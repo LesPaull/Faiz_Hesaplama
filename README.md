@@ -5,7 +5,7 @@ Bu uygulama ile:
 - Basit faiz hesaplayabilirsin
 - Bileşik faiz hesaplayabilirsin
 - Sonuçları CSV dosyasına kaydedebilirsin
-- Kayıtları görüntüleyebilir ve silebilirsin
+- Kayıtları istediğin zaman tabloda görüntüleyebilirsin.
 
 ## 🚀 Nasıl Kullanılır?
 
