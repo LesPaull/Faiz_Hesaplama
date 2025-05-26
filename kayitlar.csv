@@ -1,0 +1,6 @@
+Hesap İsmi,Hesaplama Tipi,Hesap Butcesi,Faiz Oranı,Vade Günü,Vergi Oranı,Brüt Getiri,Net Getiri,Vade Sonu Net Miktar
+denemekaydi1,Faiz Hesaplama,10,10.0,10,0.0,,,
+deneme2,Faiz Hesaplama,10,10.0,10,0.0,0.03,0.03,10.03
+deneme2,Faiz Hesaplama,10,10.0,10,0.0,0.03,0.03,10.03
+deneme3,Bileşik Faiz Hesaplama,100,100.0,10,11.2,2.77,-8.74,
+deneme3,Bileşik Faiz Hesaplama,100,100.0,10,11.2,2.77,-8.74,
