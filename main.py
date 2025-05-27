@@ -10,8 +10,7 @@ while True:
             break
         else:
             continue
-
-    islemsecmek = menu_goster()
+                
     butce = butce_sor()
     faiz_orani = faiz_orani_sor()
     vade_gun = vade_sayisi_sor()

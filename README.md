@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 📊 Faiz Hesaplama Uygulaması
 
 Bu uygulama ile:

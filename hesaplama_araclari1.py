@@ -117,20 +117,32 @@ def faiz_hesaplama_araci(butce, faiz_orani, vade_gun, taxrate):
     }
 
 def bilesik_faiz_hesaplama(butce, faiz_orani, vade_gun, taxrate):
-
-    oran = faiz_orani/100
+    oran = faiz_orani / 100
     t = vade_gun / 365
     n = 365
 
-    bilesik_brut_kar = butce * (1 + oran/n) ** (n * t)
-    bilesik_net_kar = bilesik_brut_kar * (1 - taxrate /100)
+    bilesik_brut_toplam = butce * (1 + oran / n) ** (n * t)
+    brut_getiri = bilesik_brut_toplam - butce
+
+    if taxrate >= 100:
+        print("HATA: Vergi oranı %100'den büyük olamaz!")
+        return
+
+    vergi_tutari = brut_getiri * (taxrate / 100)
+
+    net_getiri = brut_getiri - vergi_tutari
+
+    vade_sonu_net = butce + net_getiri
+
     print(Fore.RED + "BİLEŞİK FAİZ HESAPLAMA SONUCU\n" + Style.RESET_ALL)
-    print(f"Vade Sonu Brüt miktar: {bilesik_brut_kar}")
-    print(Fore.GREEN + f"Vade Sonu Net Miktar: {bilesik_net_kar}" + Style.RESET_ALL)
+    print(f"Brüt Getiri: {brut_getiri:.2f} TL")
+    print(f"Net Getiri: {net_getiri:.2f} TL")
+    print(Fore.GREEN + f"Vade Sonu Net Miktar: {vade_sonu_net:.2f} TL" + Style.RESET_ALL)
+
     return {
-        "Brüt Getiri": round(bilesik_brut_kar - butce, 2),
-        "Net Getiri": round(bilesik_net_kar - butce, 2),
-        "Vade Sonu Net Miktar": round(bilesik_net_kar, 2)
+        "Brüt Getiri": round(brut_getiri, 2),
+        "Net Getiri": round(net_getiri, 2),
+        "Vade Sonu Net Miktar": round(vade_sonu_net, 2)
     }
 
 hesap_kayitlari = []
